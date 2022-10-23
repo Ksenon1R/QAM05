@@ -1,0 +1,296 @@
+{
+	"info": {
+		"_postman_id": "61e74668-f6f7-49d9-bac6-6a039a653751",
+		"name": "Bugred",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23965327"
+	},
+	"item": [
+		{
+			"name": "DoRegister",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "101010@mail.ru",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "101010",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "101010",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://users.bugred.ru/tasks/rest/doregister",
+					"protocol": "http",
+					"host": [
+						"users",
+						"bugred",
+						"ru"
+					],
+					"path": [
+						"tasks",
+						"rest",
+						"doregister"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DoRegister without name",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "101010@mail.ru",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "101010",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "101010",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://users.bugred.ru/tasks/rest/doregister",
+					"protocol": "http",
+					"host": [
+						"users",
+						"bugred",
+						"ru"
+					],
+					"path": [
+						"tasks",
+						"rest",
+						"doregister"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "companies[3]",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "101014@mail.ru",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "1010166",
+							"type": "text"
+						},
+						{
+							"key": "tasks[5]",
+							"value": "20",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://users.bugred.ru/tasks/rest/createuser",
+					"protocol": "http",
+					"host": [
+						"users",
+						"bugred",
+						"ru"
+					],
+					"path": [
+						"tasks",
+						"rest",
+						"createuser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Avatar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "avatar",
+							"type": "file",
+							"src": "/C:/Users/37529/Desktop/1551512888_2.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://users.bugred.ru/tasks/rest/addavatar?email=101010@mail.ru",
+					"protocol": "http",
+					"host": [
+						"users",
+						"bugred",
+						"ru"
+					],
+					"path": [
+						"tasks",
+						"rest",
+						"addavatar"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "101010@mail.ru"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Avatar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://users.bugred.ru/tasks/rest/deleteavatar/?email=101010@mail.ru",
+					"protocol": "http",
+					"host": [
+						"users",
+						"bugred",
+						"ru"
+					],
+					"path": [
+						"tasks",
+						"rest",
+						"deleteavatar",
+						""
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "101010@mail.ru"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create User without tasks",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "companies[3]",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "101014@mail.ru",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "1010166",
+							"type": "text"
+						},
+						{
+							"key": "tasks[5]",
+							"value": "20",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://users.bugred.ru/tasks/rest/createuser",
+					"protocol": "http",
+					"host": [
+						"users",
+						"bugred",
+						"ru"
+					],
+					"path": [
+						"tasks",
+						"rest",
+						"createuser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Avatar with incorrect file type",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "avatar",
+							"description": "7 kb",
+							"type": "file",
+							"src": "/C:/Users/37529/Downloads/Excel.xlsx"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://users.bugred.ru/tasks/rest/addavatar?email=101010@mail.ru",
+					"protocol": "http",
+					"host": [
+						"users",
+						"bugred",
+						"ru"
+					],
+					"path": [
+						"tasks",
+						"rest",
+						"addavatar"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "101010@mail.ru"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
